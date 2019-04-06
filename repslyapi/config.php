@@ -9,7 +9,6 @@ mysqli_select_db($conn, "smart_mobile_production");
 die("Connection error: " . mysqli_connect_error());
 }
 
-
 function getTimeStamp($methodID){
 	global $conn;
 	$sel_timestamp = "SELECT * FROM timestampmanagement WHERE requestType = ".$methodID;
