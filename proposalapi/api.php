@@ -7,12 +7,12 @@
 	class API extends REST {
 		
 		public $data = "";
-		const DB_SERVER = "smart-mobile-production.cfkyixhewlor.ap-southeast-2.rds.amazonaws.com";
-        const DB_USER = "smart_mobile";
-        const DB_PASSWORD = "&e3|MnuQYXQM";
-        const DB = "smart_mobile_production";
+		const DB_SERVER = $_SERVER['DB_HOST'];
+        const DB_USER = $_SERVER['DB_USER'];
+        const DB_PASSWORD = $_SERVER['DB_PASSWORD'];
+        const DB = $_SERVER['DB_NAME'];
 		const val = 1;
-		
+        
 		private $db = NULL;
 	
 		public function __construct(){

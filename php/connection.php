@@ -1,8 +1,8 @@
 <?php
-$conn = mysqli_connect("smart-mobile-production.cfkyixhewlor.ap-southeast-2.rds.amazonaws.com","smart_mobile","&e3|MnuQYXQM");
+$conn = mysqli_connect($_SERVER['DB_HOST'],$_SERVER['DB_USER'],$_SERVER['DB_PASSWORD']);
 
 if($conn){
-mysqli_select_db($conn, "smart_mobile_production");
+mysqli_select_db($conn, $_SERVER['DB_NAME']);
 }else
 {
 die("Connection error: " . mysqli_connect_error());
