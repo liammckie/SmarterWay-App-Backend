@@ -1,7 +1,7 @@
 <?php
 set_time_limit ( 0 );
 
-$conn = mysqli_connect($_SERVER['DB_HOST'],$_SERVER['DB_USER'],$_SERVER['DB_PASSWORD']);
+$conn = mysqli_connect("wordpressdb.cfkyixhewlor.ap-southeast-2.rds.amazonaws.com","smart_mobile","&e3|MnuQYXQM");
 if($conn){
 	mysqli_select_db($conn, $_SERVER['DB_NAME']);
 }else{
