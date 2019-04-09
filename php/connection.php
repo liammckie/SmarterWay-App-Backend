@@ -1,5 +1,5 @@
 <?php
-$conn = mysqli_connect("wordpressdb.cfkyixhewlor.ap-southeast-2.rds.amazonaws.com","smart_mobile_production","&e3|MnuQYXQM");
+$conn = mysqli_connect("wordpressdb.cfkyixhewlor.ap-southeast-2.rds.amazonaws.com","smart_mobile","&e3|MnuQYXQM");
 if($conn){
 	mysqli_select_db($conn, "smart_mobile_production");
 }else{
