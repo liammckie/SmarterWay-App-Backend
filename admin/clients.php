@@ -92,7 +92,7 @@ require '../php/admin_session.php';
                                                                 </thead>
                                                                 <tbody> 
                                                                     <?php 
-                                                                    $data=mysqli_query($conn,"SELECT DISTINCT c.Code, c.ClientID, c.Name, c.StreetAddress, c.City, c.Country, s.AccountManagerName FROM `Clients` c LEFT JOIN subcontractordetails s on c.ClientID = s.clientID WHERE c.Id != '".$AdminData."' ");
+                                                                    $data=mysqli_query($conn,"SELECT DISTINCT c.Code, c.ClientID, c.Name, c.StreetAddress, c.State, c.City, c.Country, s.AccountManagerName FROM `Clients` c LEFT JOIN subcontractordetails s on c.ClientID = s.clientID WHERE c.Id != '".$AdminData."' ");
                                                                     $counter = 0;
                                                                     while($row=mysqli_fetch_array($data)){
                                                                     ?>

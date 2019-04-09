@@ -7,11 +7,11 @@
     require_once("Rest.inc.php");
 	class API extends REST {
 		public $data = "";
-		/*const DB_SERVER = "162.241.218.43";
-        const DB_USER = "vbeasyco_scs";
-        const DB_PASSWORD = "vbeasyco_scs";
-        const DB = "vbeasyco_scs";
-		const val = 1;*/
+        const DB_SERVER = "wordpressdb.cfkyixhewlor.ap-southeast-2.rds.amazonaws.com";
+        const DB_USER = "smart_mobile";
+        const DB_PASSWORD = "&e3|MnuQYXQM";
+        const DB = "smart_mobile_production";
+		const val = 1;
 		
 		private $db = NULL;
 	
@@ -29,9 +29,9 @@
 		 *  Database connection 
 		*/
 		private function dbConnect(){
-			$this->db = mysqli_connect(self::$_SERVER['DB_SERVER'],self::$_SERVER['DB_USER'],self::$_SERVER['DB_PASSWORD']);
+			$this->db = mysqli_connect(self::DB_SERVER,self::DB_USER,self::DB_PASSWORD);
 			if($this->db)
-				mysqli_select_db($this->db,self::$_SERVER['DB_NAME']);
+				mysqli_select_db($this->db,self::DB);
 				mysqli_set_charset($this->db, 'utf8');
 		}
 		
