@@ -30,10 +30,10 @@ function getData($timeStamp){
 }
 
 function updateTimeSchedue($IsAlarmclientID){
-    echo "<br/>"."http://scs.vbeasy.com/alam_esclation/alarmschedular.php?IsAlarmclientID=".$IsAlarmclientID;
+    echo "<br/>"."https://scsportal.com.au/alam_esclation/alarmschedular.php?IsAlarmclientID=".$IsAlarmclientID;
 	$curl = curl_init();
 	curl_setopt_array($curl, array(
-	  CURLOPT_URL => "http://scs.vbeasy.com/alam_esclation/alarmschedular.php?IsAlarmclientID=".$IsAlarmclientID,
+	  CURLOPT_URL => "https://scsportal.com.au/alam_esclation/alarmschedular.php?IsAlarmclientID=".$IsAlarmclientID,
 	  CURLOPT_RETURNTRANSFER => true,
 	  CURLOPT_ENCODING => "",
 	  CURLOPT_MAXREDIRS => 10,
