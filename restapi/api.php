@@ -7,10 +7,10 @@
 	class API extends REST {
 		
 		public $data = "";
-		const DB_SERVER = $_SERVER['DB_HOST'];;
-        const DB_USER = $_SERVER['DB_USER'];
-        const DB_PASSWORD = $_SERVER['DB_PASSWORD'];
-        const DB = $_SERVER['DB_NAME'];
+		const DB_SERVER = $_SERVER['DB_HOST'];
+        	const DB_USER = $_SERVER['DB_USER'];
+        	const DB_PASSWORD = $_SERVER['DB_PASSWORD'];
+        	const DB = $_SERVER['DB_NAME'];
 		const val = 1;
 		
 		private $db = NULL;
