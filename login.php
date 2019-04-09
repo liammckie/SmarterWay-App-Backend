@@ -89,28 +89,6 @@ if(isset($_SESSION['Id'])){
         </div>
         <!-- end of container-fluid -->
     </section>
-    </div>
-    <?php require 'footer.php'; ?>
-<!-- Required Jquery -->
-<script type="text/javascript" src="files/bower_components/jquery/js/jquery.min.js"></script>
-<script type="text/javascript" src="files/bower_components/jquery-ui/js/jquery-ui.min.js"></script>
-<script type="text/javascript" src="files/bower_components/popper.js/js/popper.min.js"></script>
-<script type="text/javascript" src="files/bower_components/bootstrap/js/bootstrap.min.js"></script>
-<!-- waves js -->
-<script src="files/assets/pages/waves/js/waves.min.js"></script>
-<!-- jquery slimscroll js -->
-<script type="text/javascript" src="files/bower_components/jquery-slimscroll/js/jquery.slimscroll.js"></script>
-<!-- modernizr js -->
-<script type="text/javascript" src="files/bower_components/modernizr/js/modernizr.js"></script>
-<script type="text/javascript" src="files/bower_components/modernizr/js/css-scrollbars.js"></script>
-<!-- i18next.min.js -->
-<script type="text/javascript" src="files/bower_components/i18next/js/i18next.min.js"></script>
-<script type="text/javascript" src="files/bower_components/i18next-xhr-backend/js/i18nextXHRBackend.min.js"></script>
-<script type="text/javascript" src="files/bower_components/i18next-browser-languagedetector/js/i18nextBrowserLanguageDetector.min.js"></script>
-<script type="text/javascript" src="files/bower_components/jquery-i18next/js/jquery-i18next.min.js"></script>
-<script type="text/javascript" src="files/assets/js/common-pages.js"></script>
-</body>
-</html>
 <?php 
     if(isset($_POST['login'])){
     	if(isset($_POST['username']) OR isset($_POST['password'])){
@@ -141,3 +119,25 @@ if(isset($_SESSION['Id'])){
     }
 }
 ?>
+    <?php require 'footer.php'; ?>
+<!-- Required Jquery -->
+<script type="text/javascript" src="files/bower_components/jquery/js/jquery.min.js"></script>
+<script type="text/javascript" src="files/bower_components/jquery-ui/js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="files/bower_components/popper.js/js/popper.min.js"></script>
+<script type="text/javascript" src="files/bower_components/bootstrap/js/bootstrap.min.js"></script>
+<!-- waves js -->
+<script src="files/assets/pages/waves/js/waves.min.js"></script>
+<!-- jquery slimscroll js -->
+<script type="text/javascript" src="files/bower_components/jquery-slimscroll/js/jquery.slimscroll.js"></script>
+<!-- modernizr js -->
+<script type="text/javascript" src="files/bower_components/modernizr/js/modernizr.js"></script>
+<script type="text/javascript" src="files/bower_components/modernizr/js/css-scrollbars.js"></script>
+<!-- i18next.min.js -->
+<script type="text/javascript" src="files/bower_components/i18next/js/i18next.min.js"></script>
+<script type="text/javascript" src="files/bower_components/i18next-xhr-backend/js/i18nextXHRBackend.min.js"></script>
+<script type="text/javascript" src="files/bower_components/i18next-browser-languagedetector/js/i18nextBrowserLanguageDetector.min.js"></script>
+<script type="text/javascript" src="files/bower_components/jquery-i18next/js/jquery-i18next.min.js"></script>
+<script type="text/javascript" src="files/assets/js/common-pages.js"></script>
+</body>
+</html>
+

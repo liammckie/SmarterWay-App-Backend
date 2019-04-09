@@ -1,10 +1,10 @@
 <?php 
-$DB_SERVER = "smart-mobile-production.cfkyixhewlor.ap-southeast-2.rds.amazonaws.com";
-$DB_USER = "smart_mobile";
-$DB_PASSWORD = "&e3|MnuQYXQM";
-$DB = "smart_mobile_production";
+/*$DB_SERVER = $_SERVER['DB_HOST'];
+$DB_USER = $_SERVER['DB_USER'];
+$DB_PASSWORD = $_SERVER['DB_PASSWORD'];
+$DB = $_SERVER['DB_NAME'];*/
 
-$conn = mysqli_connect($DB_SERVER, $DB_USER, $DB_PASSWORD , $DB);
+$conn = mysqli_connect($_SERVER['DB_HOST'], $_SERVER['DB_USER'], $_SERVER['DB_PASSWORD' , $_SERVER['DB_NAME']);
 
 function get_timezone_offset($remote_tz, $origin_tz = null) {
     if($origin_tz === null) {
@@ -19,5 +19,4 @@ function get_timezone_offset($remote_tz, $origin_tz = null) {
     $offset = $origin_dtz->getOffset($origin_dt) - $remote_dtz->getOffset($remote_dt);
     return $offset;
 }
-
 ?>

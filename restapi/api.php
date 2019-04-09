@@ -3,15 +3,15 @@
 	 * Author : VB Easy
 	*/
 	
+	
     require_once("Rest.inc.php");
 	class API extends REST {
-		
 		public $data = "";
-		const DB_SERVER = $_SERVER['DB_HOST'];;
-        const DB_USER = $_SERVER['DB_USER'];
-        const DB_PASSWORD = $_SERVER['DB_PASSWORD'];
-        const DB = $_SERVER['DB_NAME'];
-		const val = 1;
+		/*const DB_SERVER = "162.241.218.43";
+        const DB_USER = "vbeasyco_scs";
+        const DB_PASSWORD = "vbeasyco_scs";
+        const DB = "vbeasyco_scs";
+		const val = 1;*/
 		
 		private $db = NULL;
 	
@@ -29,13 +29,16 @@
 		 *  Database connection 
 		*/
 		private function dbConnect(){
-			$this->db = mysqli_connect(self::DB_SERVER,self::DB_USER,self::DB_PASSWORD);
+			$this->db = mysqli_connect(self::$_SERVER['DB_SERVER'],self::$_SERVER['DB_USER'],self::$_SERVER['DB_PASSWORD']);
 			if($this->db)
-				mysqli_select_db($this->db,self::DB);
+				mysqli_select_db($this->db,self::$_SERVER['DB_NAME']);
+				mysqli_set_charset($this->db, 'utf8');
 		}
+		
 		private function dbConnectClose(){
 			if($this->db)
 				mysqli_close($this->db);
+				$this->db = null; 
 		}
 		
 		/*
@@ -60,7 +63,7 @@
 		 
 			private function checkClientID($clientIDCode) {
 				$clientID = 0;
-				$sel_client_latlong_details = "SELECT * From `Clients` WHERE `ClientID` = $clientIDCode OR `Code` = $clientIDCode";
+				$sel_client_latlong_details = "SELECT * From `Clients` WHERE `Code` = $clientIDCode";// OR `ClientID` = $clientIDCode;
 				$query_client_latlong_details = mysqli_query($this->db,$sel_client_latlong_details);
 				
 				if(mysqli_num_rows($query_client_latlong_details) == 1){
@@ -1008,7 +1011,7 @@
 					//Checking the User Logged in Or Not.
 					$select_userLoggedIn = "SELECT * FROM message_cleaner_am 
 					                        WHERE  clientID = $clientID 
-											";
+											LIMIT 1";
 					$mysqli_Query_results = mysqli_query($this->db, $select_userLoggedIn);
 					 //--AND status = 1
 					
@@ -1374,4 +1377,5 @@
 	// Initiiate Library
 	$api = new API;
 	$api->processApi();
+	unset($api)
 ?>

@@ -75,10 +75,8 @@
 		$_data_call["From"] = FROM;
 		$_data_call["To"] = $arrayRow["MobileNo"];
 		$_data_call["StatusCallbackMethod"] = "POST";
-		$_data_call["Url"] = "http://scsportal.com.au/alam_esclation/getXML.php?alarm_id=".$arrayRow["alarm_id"];
-		$_data_call["StatusCallback"] = "http://scsportal.com.au/alam_esclation/callback.php";
-		//$_data_call["Url"] = "http://scs.vbeasy.com/alam_esclation/getXML.php?alarm_id=".$arrayRow["alarm_id"];
-		//$_data_call["StatusCallback"] = "http://scs.vbeasy.com/alam_esclation/callback.php";
+		$_data_call["Url"] = "https://scsportal.com.au/alam_esclation/getXML.php?alarm_id=".$arrayRow["alarm_id"];
+		$_data_call["StatusCallback"] = "https://scsportal.com.au/alam_esclation/callback.php";
 
 		$data_call = sendReq($_data_call, CALL);
 		$sid = "";
@@ -101,10 +99,8 @@
 		$_data_call["From"] = FROM;
 		$_data_call["To"] = $arrayRow["MobileNo"];
 		$_data_call["StatusCallbackMethod"] = "POST";
-		$_data_call["Url"] = "http://scsportal.com.au/alam_esclation/getXMLV2.php?alarm_id=".$arrayRow["alarm_id"];
-		$_data_call["StatusCallback"] = "http://scsportal.com.au/alam_esclation/callbackV2.php";
-	   	//$_data_call["Url"] = "http://scs.vbeasy.com/alam_esclation/getXMLV2.php?alarm_id=".$arrayRow["alarm_id"];
-		//$_data_call["StatusCallback"] = "http://scs.vbeasy.com/alam_esclation/callbackV2.php";
+	   	$_data_call["Url"] = "https://scsportal.com.au/alam_esclation/getXMLV2.php?alarm_id=".$arrayRow["alarm_id"];
+		$_data_call["StatusCallback"] = "https://scsportal.com.au/alam_esclation/callbackV2.php";
 
 
 		$data_call = sendReq($_data_call, CALL);

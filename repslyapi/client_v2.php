@@ -107,6 +107,8 @@ for($i=0;$i<$j;$i++){
 			    $query_result = mysqli_query($conn, $del_Client);
 			    $del_AlarmSchedule = "DELETE FROM AlarmSchedule WHERE ClientID = ".$ClientID;
 			    $query_AlarmSchedule = mysqli_query($conn, $del_AlarmSchedule);
+			    $del_message_cleaner_am = "DELETE FROM message_cleaner_am WHERE clientID = ".$ClientID;
+			    $query_message_cleaner_am = mysqli_query($conn, $del_message_cleaner_am);
 			    $del_subcontractordetails = "DELETE FROM subcontractordetails WHERE clientID = ".$ClientID;
 			    $query_subcontractordetails = mysqli_query($conn, $del_subcontractordetails);
 			}

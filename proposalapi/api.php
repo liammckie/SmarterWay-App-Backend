@@ -7,12 +7,12 @@
 	class API extends REST {
 		
 		public $data = "";
-		const DB_SERVER = $_SERVER['DB_HOST'];
-        const DB_USER = $_SERVER['DB_USER'];
-        const DB_PASSWORD = $_SERVER['DB_PASSWORD'];
-        const DB = $_SERVER['DB_NAME'];
-		const val = 1;
-        
+		/*const DB_SERVER = "162.241.218.43";
+        const DB_USER = "vbeasyco_scs";
+        const DB_PASSWORD = "vbeasyco_scs";
+        const DB = "vbeasyco_scs_proposal";
+		const val = 1;*/
+		
 		private $db = NULL;
 	
 		public function __construct(){
@@ -29,9 +29,9 @@
 		 *  Database connection 
 		 */
 		private function dbConnect(){
-			$this->db = mysqli_connect(self::DB_SERVER,self::DB_USER,self::DB_PASSWORD);
+			$this->db = mysqli_connect(self::$_SERVER['DB_SERVER'],self::$_SERVER['DB_USER'],self::$_SERVER['DB_PASSWORD']);
 			if($this->db)
-				mysqli_select_db($this->db,self::DB);
+				mysqli_select_db($this->db,self::$_SERVER['DB_NAME']);
 				mysqli_set_charset($this->db, 'utf8');
 		}
 		

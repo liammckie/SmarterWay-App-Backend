@@ -16,4 +16,5 @@ while($row=mysqli_fetch_array($data)){
 </html>
 <?php 
 }
+mysqli_close($conn);
 ?>
