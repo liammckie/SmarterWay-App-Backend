@@ -318,24 +318,7 @@ require_once 'php/session.php';
                                                                                                     <tr>
                                                                                                         <th scope="row">SubContractors Mobile</th>
                                                                                                         <td>
-                                                                                                            <?php
-                                                                                                                $str = $row[6];
-                                                                                                                if($str[0]=='?' && $str[strlen($str)-1]=='?'){
-                                                                                                                    $str= substr ($str,'1',-1);
-                                                                                                                    echo $str;
-                                                                                                                }
-                                                                                                                else if($str[0]=='?'){
-                                                                                                                    $str= substr ($str,'1');
-                                                                                                                    echo $str;
-                                                                                                                }
-                                                                                                                else if($str[strlen($str)-1]=='?'){
-                                                                                                                    $str= substr ($str,'-1');
-                                                                                                                    echo $str;
-                                                                                                                }
-                                                                                                                else{
-                                                                                                                    echo $row[6];
-                                                                                                                }
-                                                                                                            ?>
+                                                                                                            <?php echo $row[6]; ?>
                                                                                                         </td>
                                                                                                     </tr>
                                                                                                     <tr>
@@ -345,24 +328,7 @@ require_once 'php/session.php';
                                                                                                     <tr>
                                                                                                         <th scope="row">Directors Mobile</th>
                                                                                                         <td>
-                                                                                                            <?php
-                                                                                                                $str = $row[10];
-                                                                                                                if($str[0]=='?' && $str[strlen($str)-1]=='?'){
-                                                                                                                    $str= substr ($str,'1',-1);
-                                                                                                                    echo $str;
-                                                                                                                }
-                                                                                                                else if($str[0]=='?'){
-                                                                                                                    $str= substr ($str,'1');
-                                                                                                                    echo $str;
-                                                                                                                }
-                                                                                                                else if($str[strlen($str)-1]=='?'){
-                                                                                                                    $str= substr ($str,'-1');
-                                                                                                                    echo $str;
-                                                                                                                }
-                                                                                                                else{
-                                                                                                                    echo $row[10];
-                                                                                                                }
-                                                                                                            ?>
+                                                                                                            <?php echo $row[10]; ?>
                                                                                                         </td>
                                                                                                     </tr>
                                                                                                 </tbody>
@@ -385,24 +351,7 @@ require_once 'php/session.php';
                                                                                                     <tr>
                                                                                                         <th scope="row">Account Manager Mobile</th>
                                                                                                         <td>
-                                                                                                            <?php
-                                                                                                                $str = $row[9];
-                                                                                                                if($str[0]=='?' && $str[strlen($str)-1]=='?'){
-                                                                                                                    $str= substr ($str,'1',-1);
-                                                                                                                    echo $str;
-                                                                                                                }
-                                                                                                                else if($str[0]=='?'){
-                                                                                                                    $str= substr ($str,'1');
-                                                                                                                    echo $str;
-                                                                                                                }
-                                                                                                                else if($str[strlen($str)-1]=='?'){
-                                                                                                                    $str= substr ($str,'-1');
-                                                                                                                    echo $str;
-                                                                                                                }
-                                                                                                                else{
-                                                                                                                    echo $row[9];
-                                                                                                                }
-                                                                                                            ?>
+                                                                                                            <?php echo $row[9]; ?>
                                                                                                         </td>
                                                                                                     </tr>
                                                                                                     <tr>
@@ -412,24 +361,7 @@ require_once 'php/session.php';
                                                                                                     <tr>
                                                                                                         <th scope="row">Operations Manager Mobile</th>
                                                                                                         <td>
-                                                                                                            <?php
-                                                                                                                $str = $row[11];
-                                                                                                                if($str[0]=='?' && $str[strlen($str)-1]=='?'){
-                                                                                                                    $str= substr ($str,'1',-1);
-                                                                                                                    echo $str;
-                                                                                                                }
-                                                                                                                else if($str[0]=='?'){
-                                                                                                                    $str= substr ($str,'1');
-                                                                                                                    echo $str;
-                                                                                                                }
-                                                                                                                else if($str[strlen($str)-1]=='?'){
-                                                                                                                    $str= substr ($str,'-1');
-                                                                                                                    echo $str;
-                                                                                                                }
-                                                                                                                else{
-                                                                                                                    echo $row[11];
-                                                                                                                }
-                                                                                                            ?>
+                                                                                                            <?php echo $row[11]; ?>
                                                                                                         </td>
                                                                                                     </tr>
                                                                                                 </tbody>
