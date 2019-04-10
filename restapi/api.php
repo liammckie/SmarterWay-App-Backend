@@ -63,7 +63,7 @@
 		 
 			private function checkClientID($clientIDCode) {
 				$clientID = 0;
-				$sel_client_latlong_details = "SELECT * From `Clients` WHERE `Code` = $clientIDCode";// OR `ClientID` = $clientIDCode;
+				$sel_client_latlong_details = "SELECT * From `Clients` WHERE `Code` = $clientIDCode OR `ClientID` = $clientIDCode ";
 				$query_client_latlong_details = mysqli_query($this->db,$sel_client_latlong_details);
 				
 				if(mysqli_num_rows($query_client_latlong_details) == 1){
