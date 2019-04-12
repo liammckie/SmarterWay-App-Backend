@@ -1,10 +1,10 @@
 <?php 
-/*$DB_SERVER = $_SERVER['DB_HOST'];
-$DB_USER = $_SERVER['DB_USER'];
-$DB_PASSWORD = $_SERVER['DB_PASSWORD'];
-$DB = $_SERVER['DB_NAME'];*/
+$DB_SERVER = "wordpressdb.cfkyixhewlor.ap-southeast-2.rds.amazonaws.com";
+$DB_USER = "smart_mobile";
+$DB_PASSWORD = "&e3|MnuQYXQM";
+$DB = "smart_mobile_production";
 
-$conn = mysqli_connect("wordpressdb.cfkyixhewlor.ap-southeast-2.rds.amazonaws.com","smart_mobile","&e3|MnuQYXQM","smart_mobile_production");
+$conn = mysqli_connect("$DB_SERVER","$DB_USER","$DB_PASSWORD","$DB");
 
 function get_timezone_offset($remote_tz, $origin_tz = null) {
     if($origin_tz === null) {
