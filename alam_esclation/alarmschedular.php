@@ -1,4 +1,21 @@
 <?php 
+
+die(); // 13 April 6:15pm - Please read below comment
+
+/** 
+
+This script is untable and is continuously creating connections to the databases that are not closed off.
+DB Queries executed by for loop on line 40 resolve an error.
+This will need to be repaired to prevent server from crashing. 
+
+PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, 
+boolean given in /var/app/current/alam_esclation/alarmschedular.php on line 40
+
+This script has been terminated prior to it's execution on 13 April 6:15pm by Daynis
+
+*/
+
+
 include "db_config.php";
 
 
