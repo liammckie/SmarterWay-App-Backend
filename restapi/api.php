@@ -9,13 +9,12 @@
 		public $data = "";
 	  
 		
-		/*Bluehost */
-        const DB_SERVER = "162.241.218.43";
-        const DB_USER = "vbeasyco_scs";
-        const DB_PASSWORD = "vbeasyco_scs";
-        const DB = "vbeasyco_scs";
+        const DB_SERVER = "db-11-april-midnight.cfkyixhewlor.ap-southeast-2.rds.amazonaws.com";
+        const DB_USER = "smart_mobile";
+        const DB_PASSWORD = "&e3|MnuQYXQM";
+        const DB = "smart_mobile_production";
 		
-		
+	
 		
 	/*  		AWS RDS
 	const DB_SERVER = "wordpressdb.cfkyixhewlor.ap-southeast-2.rds.amazonaws.com";

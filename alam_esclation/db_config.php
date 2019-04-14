@@ -1,5 +1,5 @@
 <?php 
-$DB_SERVER = "wordpressdb.cfkyixhewlor.ap-southeast-2.rds.amazonaws.com";
+$DB_SERVER = "db-11-april-midnight.cfkyixhewlor.ap-southeast-2.rds.amazonaws.com";
 $DB_USER = "smart_mobile";
 $DB_PASSWORD = "&e3|MnuQYXQM";
 $DB = "smart_mobile_production";
